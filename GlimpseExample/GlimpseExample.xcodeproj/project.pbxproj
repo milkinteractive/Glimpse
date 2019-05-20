@@ -40,7 +40,7 @@
 		08F243A4170092A700DFFB78 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		08F243A6170092A700DFFB78 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		08F243A8170092A700DFFB78 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		08F243B91700930B00DFFB78 /* libGlimpse.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libGlimpse.a; path = "../Glimpse/build/Release-iphoneos/libGlimpse.a"; sourceTree = "<group>"; };
+		08F243B91700930B00DFFB78 /* libGlimpse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGlimpse.a; path = "../Glimpse/build/Release-iphoneos/libGlimpse.a"; sourceTree = "<group>"; };
 		08F243BA1700930B00DFFB78 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		08F243BB1700930B00DFFB78 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		08F243C11700AD3400DFFB78 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -161,12 +161,19 @@
 				CLASSPREFIX = GE;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Wess Cope";
+				TargetAttributes = {
+					08F2438E170092A700DFFB78 = {
+						DevelopmentTeam = 4X2K65LNZ3;
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 08F2438A170092A700DFFB78 /* Build configuration list for PBXProject "GlimpseExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 08F24386170092A700DFFB78;
@@ -277,10 +284,13 @@
 		08F243AD170092A700DFFB78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4X2K65LNZ3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GlimpseExample/GlimpseExample-Prefix.pch";
 				INFOPLIST_FILE = "GlimpseExample/GlimpseExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Milk Wildcard Develop";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -288,10 +298,13 @@
 		08F243AE170092A700DFFB78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4X2K65LNZ3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GlimpseExample/GlimpseExample-Prefix.pch";
 				INFOPLIST_FILE = "GlimpseExample/GlimpseExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Milk Wildcard Develop";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -315,6 +328,7 @@
 				08F243AE170092A700DFFB78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
